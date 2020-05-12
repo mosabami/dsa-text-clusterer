@@ -27,6 +27,12 @@ def cleanse_text(text):
     else:
         return text
 
+# A welcome message to test our server
+@app.route('/')
+def index():
+    return """<h1>Welcome to our text clustering webapp !!</h1> 
+    <p>go to <a href="/apidocs">app page<a> to access the app<p>"""
+
 @app.route("/cluster",methods=["POST"])
 def cluster():
     """
